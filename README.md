@@ -48,13 +48,12 @@ pip install foobar
     Accept'in aynısı fakat status column'u PENDING'TEN DENIED'A çeviriyor
   
   ### /getRelation/:senderid/:receiverid
-    Burada auth kısmını eklemedim. Böylece istediği şekilde çekebiliyor yoksa da bad request gönderiyor.
+    Burada auth kısmını eklemedim. Böylece istediği şekilde çekebiliyor yoksa da NotFound gönderiyor.
 
   ## IMPLEMENTATION
-  Öncelikle REST kısmında MVC uyguladım böylece controllerimden geçen inputlar service folderıma gidiyor.Ordan da Grpc'ye geçiyor ve Grpc'Den gelen yanıta göre 
-  
-
-Please make sure to update tests as appropriate.
+  Öncelikle REST kısmında MVC uyguladım böylece controllerimden geçen inputlar service folderıma gidiyor.Ordan da Grpc'ye geçiyor ve Grpc'Den gelen yanıta göre user'a sonuc gönderiyor. Bu arada GRPC serveri Kafka'nın topiclerine gerekli [KAFKA]RELATION CREATED gibi bilgiler yolluyor ve bu sırada Rest serverinde topicleri consume eden kafkaConsumer bulunuyor. Aynı zamanda Redis'ten veri çekildiğinde [REDİS]Key Found gibi loglar da print ediliyor.
+  ## EK BILGILER
+  User's tablosuna veri eklemek için RestKısmında database_test ekledim. Bu kısım test amaçlı değil de istedğiniz bir user'ı user tablosuna aktarmak için kullanılabilir.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
