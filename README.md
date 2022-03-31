@@ -12,7 +12,13 @@
   2) kafka locahost:????'da çalışmalı ve quickstart-events adlı bir topic olusturulmalı
   3) Database çalışmalı ve bu iki query postgreste calıstırmalı ve iki adet database-table oluşturulmalı
 ```bash
-pip install foobar
+CREATE TABLE IF NOT EXISTS public.macromusic_user
+(
+    id integer NOT NULL DEFAULT nextval('user_id_seq'::regclass),
+    username text COLLATE pg_catalog."default" NOT NULL,
+    password text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT macromusic_user_pkey PRIMARY KEY (id)
+)
 ```
 ```bash
 pip install foobar
