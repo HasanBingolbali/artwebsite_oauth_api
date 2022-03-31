@@ -8,9 +8,9 @@
 -Fiber
  kullanılarak makromusik ilişkiler yapısının simulasyonu oluşturuldu
 ## Çalıştırmak için requirements
-  1) Redis localhost:????'da çalışmalı
-  2) kafka locahost:????'da çalışmalı ve quickstart-events adlı bir topic olusturulmalı
-  3) Database çalışmalı ve bu iki query postgreste calıstırmalı ve iki adet database-table oluşturulmalı
+  1) Redis localhost:6379'da çalışmalı
+  2) kafka locahost:9092'de çalışmalı ve quickstart-events adlı bir topic olusturulmalı
+  3) Database localhost:5432'de çalışmalı ve bu iki query postgreste calıstırmalı ve iki adet database-table oluşturulmalı
 ```bash
 CREATE TABLE IF NOT EXISTS public.macromusic_user
 (
