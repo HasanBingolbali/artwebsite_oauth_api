@@ -36,7 +36,8 @@ CREATE TABLE IF NOT EXISTS public.macromusic_relation
 4) Port: 1000 boş olmalı çünkü Grpc serverimiz orada olucak.
 5) Env variables aşağıdaki set edilmeli çünkü database id ve şifremiz env variable olarak tutulucak.
 ```bash
-pip install foobar
+export dbname="macromusic_relation_database"
+export db_password="hasannaber123" 
 ```
 
 # Kullanım
