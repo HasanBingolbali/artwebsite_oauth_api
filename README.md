@@ -47,10 +47,10 @@ pip install foobar
    ### /reject/:receiverid
     Accept'in aynısı fakat status column'u PENDING'TEN DENIED'A çeviriyor
   
-  ###/getRelation/:senderid/:receiverid
+  ### /getRelation/:senderid/:receiverid
     Burada auth kısmını eklemedim. Böylece istediği şekilde çekebiliyor yoksa da bad request gönderiyor.
 
-  ##IMPLEMENTATION
+  ## IMPLEMENTATION
   Öncelikle REST kısmında MVC uyguladım böylece controllerimden geçen inputlar service folderıma gidiyor.Ordan da Grpc'ye geçiyor ve Grpc'Den gelen yanıta göre 
   
 
