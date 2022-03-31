@@ -21,7 +21,17 @@ CREATE TABLE IF NOT EXISTS public.macromusic_user
 )
 ```
 ```bash
-pip install foobar
+CREATE TABLE IF NOT EXISTS public.macromusic_relation
+(
+    id integer NOT NULL DEFAULT nextval('macromusic_relation_id_seq'::regclass),
+    status text COLLATE pg_catalog."default" NOT NULL,
+    receiverid integer NOT NULL,
+    senderid integer NOT NULL,
+    daterequested date,
+    dateanswered date,
+    CONSTRAINT macromusic_relation_pkey PRIMARY KEY (id),
+    CONSTRAINT order_unique UNIQUE (receiverid, senderid)
+)
 ```
 4) Port: 1000 boş olmalı çünkü Grpc serverimiz orada olucak.
 5) Env variables aşağıdaki set edilmeli çünkü database id ve şifremiz env variable olarak tutulucak.
